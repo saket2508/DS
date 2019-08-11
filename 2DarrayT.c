@@ -44,6 +44,8 @@ int main(){
     getdata(array,m,n);
     transpose(array,arrT,m,n);
     displayData(arrT,m,n);
+    free(arrT);
+    free(array);
     return 0;
 }
 
