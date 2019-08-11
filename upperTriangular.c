@@ -34,7 +34,7 @@ if(isUpperTriangular(arr,m)){
 else{
     printf("NO");
 }
-
+free(arr);
 
 
 return 0;
