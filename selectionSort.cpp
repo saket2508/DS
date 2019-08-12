@@ -37,7 +37,7 @@ int*arr = new int[m];
 getData(arr,m);
 SelectionSort(arr,m);
 printData(arr,m);
-free[]arr;
+delete[]arr;
 return 0;
 
 
