@@ -32,11 +32,11 @@ int main(){
     printf("enter the dimensions of the matrix\n");
     scanf("%d",&m);
     scanf("%d",&n);
-    int**array = (int**)malloc(sizeof(int)*m);
+    int**array = (int**)malloc(sizeof(int*)*m);
     for(int i=0;i<m;i++){
         array[i] = (int*)malloc(sizeof(int)*n);
     }
-    int**arrT = (int**)malloc(sizeof(int)*m);
+    int**arrT = (int**)malloc(sizeof(int*)*m);
     for(int i=0;i<m;i++){
         arrT[i] = (int*)malloc(sizeof(int)*n);
     }
