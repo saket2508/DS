@@ -56,11 +56,11 @@ int main(){
     scanf("%d\n%d",&m,&n);
     printf("enter the dimensions of the second array\n");
     scanf("%d\n%d",&p,&q);
-    int**arr1 = (int**)malloc(sizeof(int)*m);
+    int**arr1 = (int**)malloc(sizeof(int*)*m);
     for(int i=0;i<m;i++){
         arr1[i] = (int*)malloc(sizeof(int)*n);
         }
-    int**arr2 = (int**)malloc(sizeof(int)*p);
+    int**arr2 = (int**)malloc(sizeof(int*)*p);
     for(int i=0;i<p;i++){
         arr2[i] = (int*)malloc(sizeof(int)*q);
     }
