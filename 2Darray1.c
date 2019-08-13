@@ -24,7 +24,7 @@ int main() {
     printf("ENTER THE DIMENSIONS\n");
     scanf("%d",&p);
     scanf("%d",&q);
-    int **arr = (int **) malloc(sizeof(int) * p);
+    int **arr = (int **) malloc(sizeof(int*) * p);
     for(int i=0;i<=p;i++){
         arr[i] = (int*)malloc(sizeof(int)*q);
     }
