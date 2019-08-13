@@ -23,7 +23,7 @@ int main(){
 int m;
 printf("enter the size of the square matrix\n");
 scanf("%d",&m);
-int**arr = (int**)malloc(sizeof(int)*m);
+int**arr = (int**)malloc(sizeof(int*)*m);
 for(int i=0;i<m;i++){
     arr[i] =(int*)malloc(sizeof(int)*m);
 }
