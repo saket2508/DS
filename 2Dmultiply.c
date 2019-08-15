@@ -3,7 +3,7 @@
 
 int** multiply(int**arr1, int**arr2, int m, int n, int q){
     //A FUNCTION WITH A DOUBLE POINTER RETURN TYPE
-    int**res = (int**)malloc(sizeof(int)*m);
+    int**res = (int**)malloc(sizeof(int*)*m);
     for(int i=0;i<m;i++){
         res[i] = (int*)malloc(sizeof(int)*q);
 
