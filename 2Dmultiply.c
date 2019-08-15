@@ -35,8 +35,7 @@ void displayArray(int**res,int m, int q){
             printf("%d\t",*(*(res+i)+j));
         }
         printf("\n");
-    }
-
+   
 
 }
 void getData(int**arr1,int m, int n){
