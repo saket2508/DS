@@ -5,10 +5,6 @@ struct node{
     struct node*link;
 };
 typedef struct node NODE;
-NODE*sortll(NODE*head){
-    //algorithm
-
-}
 NODE*createList(){
     NODE*head= NULL,*temp,*newnode;
     int nnodes,nvalue;
@@ -36,9 +32,11 @@ void sort(NODE**h){
     int i,j,temp;
     for(temp1=*h;temp1!=NULL;temp1=temp1->link){
         for(temp2=temp1->link;temp2!=NULL;temp2=temp2->link){
-            temp = temp1->info;
-            temp1->info = temp2->info;
-            temp2->info = temp;
+            if(temp1->info > temp2->info){
+                temp = temp1->info;
+                temp1->info = temp2->info;
+                temp2->info = temp;
+            }
         }
     }
 
@@ -54,6 +52,7 @@ void displayList(NODE*head){
         head = head->link;
     }
 }
+
 void main(){
     NODE*head = createList();
     printf("Before sorting:\t");
