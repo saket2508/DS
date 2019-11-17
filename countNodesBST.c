@@ -1,3 +1,11 @@
+/******************************************************************************
+
+                              Online C++ Compiler.
+               Code, Compile, Run and Debug C++ program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include<stdio.h>
 #include<stdlib.h>
 struct node{
@@ -63,18 +71,21 @@ NODE* insert(NODE*root,int data){
 
     return y;
 }
-NODE*createBST(int nnodes){
-    int rval,nval;
-    printf("Enter the data to be stored by the nodes of the BST sequentially\n");
-    scanf("%d",&rval);
-    NODE*root = newnode(rval);
-    int n=1;
-    while(n<nnodes){
-        scanf("%d",&nval);
-        insert(root,nval);
-        n++;
-    }
-    return root;
+NODE*createBST(){
+   int rval,nval;
+   NODE*root;
+   printf("Enter the data to be stored by the node\t");
+   scanf("%d",&rval);
+   root = insert(root,rval);
+   while(1){
+       printf("Enter the data to be stored by the node\t");
+       scanf("%d",&nval);
+       if(nval==-1){
+           break;
+       }
+       insert(root,nval);
+   }
+   return root;
 }
 int countNodes(NODE*root){
     if(root==NULL){
@@ -98,8 +109,9 @@ int countNodes(NODE*root){
     return count;
 }
 int main(){
-    NODE*root = createBST(8);
+    NODE*root = createBST();
     printf("%d",countNodes(root));
     return 0;
 }
+
 
