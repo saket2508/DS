@@ -8,7 +8,7 @@ struct Queue{
 };
 typedef struct Queue QUEUE;
 int isFull(QUEUE*q){
-    if(q->front == MAX-1){
+    if(q->front==0 && q->rear==MAX-1){
         return 1;
     }
     return 0;
